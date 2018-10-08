@@ -1,0 +1,74 @@
+$font_family: 'Myriad Pro', 'Verdana', 'Times New Roman';
+$layout_margin: 1%;
+$dark_bg_color: #A3A3A3;
+$light_bg_color: #CCCCCC;
+$black_clr: #000000;
+$pagination_hover: #f4f4f4;
+
+body {
+    font-family: $font_family;
+    margin: 0 auto;
+}
+h1{
+    margin: $layout_margin;
+    width: 100%;
+    text-align: center;
+}
+.Table {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: $layout_margin;
+    border: 1px solid $dark_bg_color;
+    &_Row {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        
+        
+        background-color: $light_bg_color;      
+        &_Cell {
+            display: flex;
+            flex-flow: row nowrap;
+            flex-grow: 1;
+            width: 20%;
+            word-break: break-word;
+            padding: 0.5%;
+            flex-basis: 0;
+            border: 1px solid #ffffff;
+            
+        }
+    } 
+    &_Header {
+        font-weight: 600;
+        background-color: $dark_bg_color; 
+        color:#ffffff;
+    }  
+}
+
+.Pagination {
+    margin: $layout_margin;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    &_Item {
+        padding: .5%;
+        position: relative;
+        cursor: pointer;
+        min-width: 3rem;
+        text-align: center;
+        border:1px solid #ced4da;
+        color: $black_clr;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        &:hover {
+            background-color: $pagination_hover;
+        }
+        &:active{
+            color: #445565 !important;
+            background-color: #e3e7eb !important;
+            border-color: #ced4da !important;
+        }
+    }
+}
